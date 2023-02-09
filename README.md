@@ -9,10 +9,12 @@ Thank you to https://github.com/awais-vteams/laravel-crud-generator I have done 
 - php artisan make:migration libros
 - folder migrations > abrir la migracion nueva y escribir:
  public function up() { 
- // Schema::create('libros', function (Blueprint $table) { $table->bigIncrements('id');
+ // Schema::create('libros', function (Blueprint $table) { 
+ $table->bigIncrements('id');
  $table->string('nombre'); $table->string('precio');
  $table->timestamps(); });
  }
+ 
 - php artisan migrate
 - composer require laravel/ui
 - php artisan ui bootstrap --auth
